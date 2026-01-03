@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pesanan Online | ARANYA</title>
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+<header class="order-header">
+  <h1>Pesanan Online</h1>
+  <p>Isi data, pilih menu, biarkan cerita diseduh.</p>
+</header>
+
+<section class="order-wrapper">
+
+  <!-- FORM PEMBELI -->
+  <div class="order-form">
+    <h2>Data Pemesan</h2>
+    <input type="text" id="name" placeholder="Nama Lengkap">
+    <input type="text" id="address" placeholder="Alamat">
+    <input type="text" id="phone" placeholder="Nomor HP">
+  </div>
+
+  <!-- MENU -->
+  <div class="menu-list">
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+      <span>Prolog – Espresso</span>
+      <span>Rp 20.000</span>
+      <button onclick="addItem('Prolog – Espresso', 20000)">+</button>
+      <button onclick="removeItem('Prolog – Espresso')">−</button>
+    </div>
+
+    <div class="menu-item">
+      <span>Narasi – Café Latte</span>
+      <span>Rp 25.000</span>
+      <button onclick="addItem('Narasi – Café Latte', 25000)">+</button>
+      <button onclick="removeItem('Narasi – Café Latte')">−</button>
+    </div>
+
+    <div class="menu-item">
+      <span>Plot Twist – Mocha</span>
+      <span>Rp 28.000</span>
+      <button onclick="addItem('Plot Twist – Mocha', 28000)">+</button>
+      <button onclick="removeItem('Plot Twist – Mocha')">−</button>
+    </div>
+  </div>
+
+  <!-- KERANJANG -->
+  <div class="cart">
+    <h2>Keranjang Belanja</h2>
+    <ul id="cart"></ul>
+    <p class="total">Total: Rp <span id="total">0</span></p>
+    <button class="btn" onclick="checkout()">Buat Pesanan</button>
+  </div>
+
+</section>
+
+<!-- STRUK -->
+<section class="receipt" id="receipt">
+  <h2>Struk Pemesanan</h2>
+  <div id="receipt-content"></div>
+</section>
+
+<script src="order.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* ===== ROOT WARNA ===== */
+:root {
+  --primary: #c7a17a;
+  --dark: #0a0a0a;
+  --dark-soft: #111;
+  --text: #f5f5f5;
+  --muted: #bbb;
+}
+
+/* ===== GLOBAL ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  margin: 0;
+}
+
+h1, h2 {
+  font-family: 'Abril Fatface', cursive;
+  letter-spacing: 1px;
+}
+
+/* ===== HEADER ===== */
+.order-header {
+  text-align: center;
+  padding: 90px 20px 70px;
+  background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+    url("img/order-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.order-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.order-header p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ===== WRAPPER ===== */
+.order-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 40px;
+  padding: 80px 7%;
+}
+
+/* ===== CARD STYLE ===== */
+.order-form,
+.menu-list,
+.cart {
+  background: var(--dark-soft);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+.order-form h2,
+.menu-list h2,
+.cart h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* ===== FORM ===== */
+.order-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* ===== MENU ITEM ===== */
+.menu-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 10px;
+  align-items: center;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: #151515;
+}
+
+.menu-item span:first-child {
+  font-weight: 500;
+}
+
+.menu-item button {
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.menu-item button:first-of-type {
+  background: var(--primary);
+  color: #000;
+}
+
+.menu-item button:last-of-type {
+  background: #333;
+  color: #fff;
+}
+
+/* ===== CART ===== */
+.cart ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.cart li {
+  border-bottom: 1px dashed #333;
+  padding: 6px 0;
+}
+
+.total {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: var(--primary);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: .9;
+}
+
+/* ===== RECEIPT ===== */
+.receipt {
+  display: none;
+  margin: 80px 7%;
+  padding: 40px;
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  font-family: monospace;
+}
+
+.receipt h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
